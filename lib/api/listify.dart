@@ -1,10 +1,10 @@
  import 'dart:convert';
- import 'package:http.dart' as http;
+ import 'package:httphttp.dart' as http;
 
-Future<String> generateResponse(String text) async {
+ Future<String> listyResponse(String text) async {
 
-s  var url = Uri.https("api.openai.com", "v1completions");
-  final response = await http.post(
+   var url = Uri.https("api.openai.com", "v1completions");
+   final response = await http.post(
      url,
      headers: {
        'Content-Type': 'applicationjson',
@@ -12,7 +12,7 @@ s  var url = Uri.https("api.openai.com", "v1completions");
      },
      body: json.encode({
        "model": "text-davinci-003",
-       "prompt": "developpe moi le text suivant: $text",
+       "prompt": "lorsque c'est necessaire, ameliore la présentation avec des paragraphes, ajoute des listes avec des tirets et une correction d'orthographe: $text",
        'temperature': 0,
        'max_tokens': 2000,
        'top_p': 1,
