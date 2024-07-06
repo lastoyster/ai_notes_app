@@ -3,7 +3,7 @@
 
 Future<String> generateResponse(String text) async {
 
-s  var url = Uri.https("api.openai.com", "v1completions");
+  var url = Uri.https("api.openai.com", "v1completions");
   final response = await http.post(
      url,
      headers: {
