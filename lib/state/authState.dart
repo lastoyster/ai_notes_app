@@ -189,6 +189,7 @@ void databaseInit(){
     }catch(error){
       isBusy=false;
       cprint(error,errorIn:'signUp');
+      // ignore: use_build_context_synchronously
       Utility.customSnackBar(scaffoldKey,error.toString(),context);
       return null;
     }
@@ -210,7 +211,7 @@ user.createAt= DateTime.now().toUtc().toString();
 
   Future<User?> getCurrentUser() async{
     try{
-      isBusy=true;
+      var bool = isBusy=true;
       Utility.logEvent('get_currentUser',parmeter:{});
     }
   }

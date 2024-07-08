@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,9 +23,9 @@ class _WelcomePageState extends State<WelcomePage> {
       PageTransition(type: PageTransitionType.fade, child: SignInPage()));
 
   DotsDecorator getDotDecoration() => DotsDecorator(
-        color: Color(0xFFBDBDBD),
-        size: Size(10, 10),
-        activeSize: Size(22, 10),
+        color: const Color(0xFFBDBDBD),
+        size: const Size(10, 10),
+        activeSize: const Size(22, 10),
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
@@ -43,9 +45,9 @@ class _WelcomePageState extends State<WelcomePage> {
                       Container(
                           width: MediaQuery.of(context).size.width / 1,
                           child: FadeInDown(
-                              duration: Duration(milliseconds: 2000),
+                              duration: const Duration(milliseconds: 2000),
                               child: FadeInLeft(
-                                  duration: Duration(milliseconds: 2000),
+                                  duration: const Duration(milliseconds: 2000),
                                   child: Lottie.network(
                                     "https://assets9.lottiefiles.com/packages/lf20_1Sx24QOjmg.json",
                                     height:
@@ -82,7 +84,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: FadeInUp(
-                    duration: Duration(milliseconds: 2000),
+                    duration: const Duration(milliseconds: 2000),
                     child: Text(
                       'Notes \ntes idées\nrapidepment💡',
                       style: TextStyle(
@@ -107,7 +109,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   child: Container(
                       width: MediaQuery.of(context).size.width / 1,
                       child: FadeInDown(
-                          duration: Duration(milliseconds: 2000),
+                          duration: const Duration(milliseconds: 2000),
                           child: Lottie.network(
                             "https://assets5.lottiefiles.com/private_files/lf30_cmd8kh2q.json",
                             height: MediaQuery.of(context).size.height / 2.5,
@@ -116,7 +118,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 Padding(
                     padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
                     child: FadeInDown(
-                      duration: Duration(milliseconds: 2000),
+                      duration: const Duration(milliseconds: 2000),
                       child: Text(
                           "Elles se reformattent\nparalellement grâce l'IA",
                           style: TextStyle(
@@ -138,9 +140,9 @@ class _WelcomePageState extends State<WelcomePage> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     FadeInDown(
-                        duration: Duration(milliseconds: 2000),
+                        duration: const Duration(milliseconds: 2000),
                         child: FadeInRight(
-                            duration: Duration(milliseconds: 2000),
+                            duration: const Duration(milliseconds: 2000),
                             child: Lottie.network(
                               "https://assets9.lottiefiles.com/packages/lf20_sop8cbmc.json",
                               height: MediaQuery.of(context).size.height / 2.5,
@@ -150,7 +152,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     ),
                     Center(
                         child: FadeInUp(
-                            child: Text(
+                            child: const Text(
                       "Connection Method:",
                       style: TextStyle(
                           fontFamily: "icons.ttf",
@@ -174,7 +176,7 @@ class _WelcomePageState extends State<WelcomePage> {
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(50),
                                       ),
-                                      child: Center(
+                                      child: const Center(
                                           child: Text(
                                         "Create Account",
                                         style: TextStyle(
@@ -188,7 +190,7 @@ class _WelcomePageState extends State<WelcomePage> {
                             Navigator.push(
                               context,
                               AwesomePageRoute(
-                                transitionDuration: Duration(milliseconds: 600),
+                                transitionDuration: const Duration(milliseconds: 600),
                                 exitPage: widget,
                                 enterPage: SignInPage(),
                                 transition: ZoomOutSlideTransition(),
@@ -197,7 +199,7 @@ class _WelcomePageState extends State<WelcomePage> {
                           },
                         ),
                         Padding(
-                            padding: EdgeInsets.only(top: 20, right: 60),
+                            padding: const EdgeInsets.only(top: 20, right: 60),
                             child: GestureDetector(
                               onTap: () {
                                 HapticFeedback.heavyImpact();
@@ -205,7 +207,7 @@ class _WelcomePageState extends State<WelcomePage> {
                                   context,
                                   AwesomePageRoute(
                                     transitionDuration:
-                                        Duration(milliseconds: 600),
+                                        const Duration(milliseconds: 600),
                                     exitPage: widget,
                                     enterPage: LogPage(),
                                     transition: ZoomOutSlideTransition(),
@@ -213,7 +215,7 @@ class _WelcomePageState extends State<WelcomePage> {
                                 );
                               },
                               child: FadeInUp(
-                                  child: Row(
+                                  child: const Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
@@ -241,11 +243,11 @@ class _WelcomePageState extends State<WelcomePage> {
                   ],
                 ))),
       ],
-      done: Text('', style: TextStyle(fontWeight: FontWeight.w600)),
+      done: const Text('', style: TextStyle(fontWeight: FontWeight.w600)),
       onDone: () => goToHome(context),
       showSkipButton: true,
-      skip: Text('Skip'),
-      next: Icon(Icons.arrow_forward),
+      skip: const Text('Skip'),
+      next: const Icon(Icons.arrow_forward),
       dotsDecorator: getDotDecoration(),
       onChange: (index) => print('Page $index selected'),
       globalBackgroundColor: Colors.black,

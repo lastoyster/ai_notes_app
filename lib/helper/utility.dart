@@ -140,7 +140,7 @@ class Utility {
     await launch(url);
   }
 
-  static void logEvent(String event, {Map<String, dynamic>? parameter}) {
+  static void logEvent(String event, {Map<String, dynamic>? parameter, required Map parmeter}) {
     kReleaseMode
         ? kAnalytics.logEvent(name: event, parameters: parameter)
         : print("[EVENT]: $event");
