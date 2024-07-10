@@ -1,8 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:ai_notes_app/helper/enum.dart';
-import 'package:ai_notes_app/state/authState.dart';
+import '../helper/enum.dart';
+import '../state/authState.dart';
 import 'package:provider/provider.dart';
 import '../helper/utility.dart';
 import '../onboarding/onboarding.dart';

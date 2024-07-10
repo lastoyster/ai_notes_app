@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:parallels/api/list.dart';
+import 'package:ai_notes_app/api/list.dart';
 import 'package:provider/provider.dart';
 import '../api/correct.dart';
 import '../api/improve.dart';
