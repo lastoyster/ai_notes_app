@@ -34,7 +34,7 @@ class _RealtimeNotePageState extends State<HomePage> {
     _note = TextEditingController();
     _prompt = TextEditingController();
     _noteRef =
-        FirebaseDatabase.instance.reference().child("note/${state.userId}");
+        FirebaseDatabase.instance.ref().child("note/${state.userId}");
     _noteRef!.onValue.listen((event) {
       setState(() {
         dynamic data = event.snapshot.value;
