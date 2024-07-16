@@ -8,11 +8,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:lottie/lottie.dart';
-import 'package:parallels/Auth/signup.dart';
-import 'package:parallels/animation/animation.dart';
-import 'package:parallels/state/authState.dart';
-import 'package:parallels/widget/custom/rippleButton.dart';
-import 'package:provider/provider.dart';
+import './Auth/signup.dart';
+import './animation/animation.dart';
+import './state/authState.dart';
+import './widget/custom/rippleButton.dart';
+import 'package:provider/providers.dart';
 import '../ui/home.dart';
 
 class AuthPage extends StatefulWidget {
